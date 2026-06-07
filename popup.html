@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            min-width: 320px;
+            max-width: 400px;
+        }
+
+        body {
+            margin: 0;
+            padding: 16px;
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        #title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e293b;
+            word-wrap: break-word;
+            line-height: 1.4;
+        }
+
+        #topicsBtn {
+            border: none;
+            background: #2563eb;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        #topicsBtn:hover {
+            background: #1d4ed8;
+        }
+
+        #topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .topic-tag {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="title">Loading title...</div>
+
+        <button id="topicsBtn">
+            Show Topics
+        </button>
+
+        <div id="topics"></div>
+    </div>
+
+</body>
+<script src="popup.js"></script>
+
+</html>

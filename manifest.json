@@ -1,0 +1,21 @@
+{
+  "name": "Hello Extensions",
+  "description": "Not a base Level Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "hello_extensions.png",
+    "default_title": "Hello Extensions"
+  },
+  "permissions": ["activeTab", "tabs"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://leetcode.com/*",
+        "https://www.geeksforgeeks.org/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
