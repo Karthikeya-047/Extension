@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            min-width: 320px;
+            max-width: 400px;
+        }
+
+        body {
+            margin: 0;
+            padding: 16px;
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        #title,
+        #hint {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e293b;
+            word-wrap: break-word;
+            line-height: 1.4;
+        }
+
+        #topicsBtn,
+        #hintBtn {
+            border: none;
+            background: #2563eb;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        #topicsBtn:hover,
+        #hintBtn:hover {
+            background: #1d4ed8;
+        }
+
+        #topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .topic-tag {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        #hintSpinner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .spinner {
+            width: 24px;
+            height: 24px;
+
+            border: 4px solid #e0e0e0;
+            border-top: 4px solid #2563eb;
+
+            border-radius: 50%;
+
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Hint Container */
+        #hint {
+            margin-top: 18px;
+            background: #ffffff;
+            border: 1px solid #dbe3f0;
+            border-radius: 12px;
+            padding: 16px 18px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Heading (optional if you add one later) */
+        #hint h3 {
+            margin: 0 0 12px;
+            color: #2563eb;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        /* Ordered List */
+        #my-list {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        /* Each Hint */
+        #my-list li {
+            margin-bottom: 14px;
+            color: #1f2937;
+            font-size: 15px;
+            line-height: 1.75;
+            font-weight: 500;
+        }
+
+        /* Last item shouldn't have extra margin */
+        #my-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Bold text inside hint */
+        #my-list strong {
+            color: #2563eb;
+        }
+
+        /* Inline code */
+        #my-list code {
+            background: #eef4ff;
+            color: #2563eb;
+            padding: 2px 6px;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="title">Loading title...</div>
+
+        <button id="topicsBtn">
+            Show Topics
+        </button>
+
+        <div id="topics"></div>
+
+        <button id="descriptionBtn">
+            Show Description
+        </button>
+
+        <div id="description"></div>
+
+        <button id="hintBtn">
+            Get Hint
+        </button>
+
+        <div id="hint">
+            
+            <h3>💡 Hint</h3>
+            <div id="hintSpinner" style="display:none;">
+                <div class="spinner"></div>
+                <span>Generating Hint...</span>
+            </div>
+
+            <ol id="my-list">
+
+            </ol>
+
+        </div>
+    </div>
+
+</body>
+<script src="sidepanel.js"></script>
+
+</html>

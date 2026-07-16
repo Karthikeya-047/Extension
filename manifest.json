@@ -1,14 +1,20 @@
 {
-  "name": "Hello Extensions",
-  "description": "Not a base Level Extension",
+  "name": "AI DSA Mentor",
+  "description": "An AI-powered mentor for DSA practice",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "sidepanel.html",
     "default_icon": "hello_extensions.png",
-    "default_title": "Hello Extensions"
+    "default_title": "AI DSA Mentor"
   },
-  "permissions": ["activeTab", "tabs"],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+},
+  "permissions": ["activeTab", "tabs","sidePanel"],
   "content_scripts": [
     {
       "matches": [
