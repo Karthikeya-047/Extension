@@ -153,6 +153,15 @@
             border-radius: 5px;
             font-size: 13px;
         }
+        #descriptionBtn{
+            display: none;
+            
+        }
+        button:disabled {
+    background: #8caaf7;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
     </style>
 </head>
 
@@ -183,7 +192,7 @@
                 <div class="spinner"></div>
                 <span>Generating Hint...</span>
             </div>
-
+            <div id="no-problem"></div>
             <ol id="my-list">
 
             </ol>
